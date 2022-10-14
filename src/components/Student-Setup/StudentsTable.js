@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button, Space, Table } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
+
 function StudentsTable(props) {
   const columns = [
     {
@@ -36,33 +37,6 @@ function StudentsTable(props) {
     },
   ];
 
-  const data = [
-    {
-      key: "1",
-      name: "John Brown",
-      grade: 11,
-      courses:
-        "English, Afrikaans, Physical Sciences, Information Technology, Mathematics, Life Sciences",
-      register: "R",
-    },
-    {
-      key: "2",
-      name: "Jim Green",
-      grade: 11,
-      courses:
-        "English, Afrikaans, Physical Sciences, Information Technology, Mathematics, Life Sciences",
-      register: "R",
-    },
-    {
-      key: "3",
-      name: "Joe Black",
-      grade: 11,
-      courses:
-        "English, Afrikaans, Physical Sciences, Information Technology, Mathematics, Life Sciences",
-      register: "R",
-    },
-  ];
-
   return (
     <Card
       title="Students"
@@ -72,7 +46,7 @@ function StudentsTable(props) {
         </Button>
       }
     >
-      <Table columns={columns} dataSource={data} />;
+      <Table columns={columns} dataSource={props.data} />
     </Card>
   );
 }
